@@ -16,7 +16,7 @@ h1 {
   }
   
   a:hover {
-    background-color: springgreen;
+    background-color: rgb(214, 201, 180);
     display: inline-block;
     border-radius: 2px;
   }
@@ -42,11 +42,16 @@ h1 {
     color: rgb(139, 124, 101);
   }
   
-  ul {
-    border-style: dotted;
-    padding: 50px;
-    border: 1px solid #5D6063;
-  }
+ul {
+  border-style: dotted;
+  padding: 50px;
+  border: 1px solid #5D6063;
+}
+
+ol {
+  display: inline-block;
+  margin-left: 100 px;
+}
   
   /* Page styles */
   .wrapper {
