@@ -22,13 +22,20 @@ h1, p {
   }
   
   nav {
-    background-color: rgba(0,139, 139,0.4);
+    background-color: rgba(214, 193, 169, 0.808);
     display: flex;
     flex-flow: row wrap;
     border-radius: 4px;
     justify-content: space-evenly;
     padding: 10px;
     margin-bottom: 15px;
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 70px;
+
   }
   
   nav a {
