@@ -42,7 +42,7 @@ h1 {
     color: rgb(139, 124, 101);
   }
   
-  h2 {
+  h2, ul {
     padding: 50px;
     border: 1px solid #5D6063;
   }
