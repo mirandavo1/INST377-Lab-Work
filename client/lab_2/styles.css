@@ -61,9 +61,12 @@ ol {
 }
 
 p {
+  border: 1px solid #5D6063;
   background-color: #a59280;
   border-style: dashed;
   border-width:2px;
+  padding: 20px 0 20px 10px;
+  margin-bottom: 50px;
 }
   
   /* Page styles */
