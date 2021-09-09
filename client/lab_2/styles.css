@@ -43,7 +43,8 @@ h1 {
   }
   
 ul {
-  border-style: dotted;
+  border-style: dashed;
+  border-width:5px;
   padding: 50px;
   border: 1px solid #5D6063;
 }
