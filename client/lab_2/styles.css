@@ -28,13 +28,9 @@ h1 {
     flex-flow: row wrap;
     border-radius: 4px;
     padding: 10px;
+    justify-content: space-evenly;
     margin-bottom: 15px;
     list-style: none;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin-left: 20 px;
   }
   
   nav a {
