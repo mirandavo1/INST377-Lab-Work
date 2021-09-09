@@ -43,10 +43,10 @@ h1 {
   }
   
 ul {
-  border-style: dashed;
-  border-width:5px;
   padding: 50px;
   border: 1px solid #5D6063;
+  border-style: dashed;
+  border-width:5px;
 }
 
 ol {
