@@ -50,15 +50,20 @@ div {
 ul {
   padding: 50px;
   border: 1px solid #5D6063;
-  border-style: dashed;
-  border-width: 2px;
+  background-color: #d1d1d1;
 }
 
 ol {
-  display: inline-block;
-  margin-left: 100 px;
-  display: inline-block;
-  margin-left: 100 px;
+    display: inline-block;
+    margin-left: 100 px;
+    display: inline-block;
+    margin-left: 100 px;
+}
+
+p {
+  background-color: #a59280;
+  border-style: dashed;
+  border-width:2px;
 }
   
   /* Page styles */
