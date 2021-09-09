@@ -35,7 +35,6 @@ h1 {
   nav li {
     display: inline-block;
     margin-left: 20 px;
-    justify-content: space-evenly;
   }
   
   nav a {
