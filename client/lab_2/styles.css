@@ -36,24 +36,6 @@ h1 {
   nav a {
     color: rgb(139, 124, 101);
   }
-
-ul {
-  padding: 50px;
-  border: 1px solid #5D6063;
-}
-
-div { 
-  border-style: dashed;
-  border-width:5px;
-  background-color: #d1d1d1;
-}
-
-ol {
-    display: inline-block;
-    margin-left: 100 px;
-    display: inline-block;
-    margin-left: 100 px;
-}
   
   /* Page styles */
   .wrapper {
