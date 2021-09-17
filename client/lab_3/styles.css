@@ -26,10 +26,15 @@
   justify-content: space-around;
 }
 
+.date{
+  margin-left: 1px;
+}
+
 .border {
   border: 1px solid #eaedf0;
   display: flex;
   justify-content: flex-end;
+  margin-left: auto
 }
 
 .links {
