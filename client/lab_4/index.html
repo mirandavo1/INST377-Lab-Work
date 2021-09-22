@@ -10,19 +10,19 @@
   </head>
   <body>
     <div class="wrapper">
-    <div class='menu-container'>
-        <div class='menu'>
-          <div class='date'>Sept 24, 2021</div>
-          <div class='border'>
-          <div class='signup'>
-            <a href="data.html">Database Demos</a>
+        <div class='menu-container'>
+            <div class='menu'>
+              <div class='date'>Sept 17, 2021</div>
+              <div class='border'>
+              <div class='signup'>
+                <a href="data.html">Database Demos</a>
+              </div>
+              <div class='login'>
+                <a href="index.html">Main Page</a>
+              </div>
+              </div>
+            </div>
           </div>
-          <div class='login'>
-            <a href="index.html">Main Page</a>
-          </div>
-          </div>
-        </div>
-      </div>
       <div class='header-container'>
         <div class='header'>
           <div class='subscribe'>Group Project</div>
@@ -32,30 +32,34 @@
             </div>
         </div>
       </div>
-      <div class="carousel">
-        <div class="carousel__item carousel__item--visible">
-            <img src='one.svg'/>
+      <div class="photo-grid-container">
+        <button id='carousel__button--prev' class="previous"aria-label="previous">Prev</button>
+        <div class="carousel">
+          <div class="slides">
+            <div class="carousel__item carousel__item--visible">
+              <img src='one.svg'/>
+            </div>
+            <div class='carousel__item'>
+              <img src='two.svg'/>
+            </div>
+            <div class='carousel__item'>
+              <img src='three.svg'/>
+            </div>
+            <div class='carousel__item'>
+              <img src='four.svg'/>
+            </div>
+            <div class='carousel__item'>
+              <img src='five.svg'/>
+            </div>
           </div>
-          <div class='carousel__item'>
-            <img src='two.svg'/>
-          </div>
-          <div class='carousel__item'>
-            <img src='three.svg'/>
-          </div>
-          <div class='carousel__item'>
-            <img src='four.svg'/>
-          </div>
-          <div class='carousel__item'>
-            <img src='five.svg'/>
-          </div>
-
-          <div class="carousel__actions">
+          <!-- < <div class="carousel__actions">
               <button id='carousel__button--prev'>Prev</button>
-              <button id='carousel__button--next'>Next</button>
-          </div>
+              <button id='carousel__button--next'>Next</button> -->
+          <!-- </div> -->
         </div>
+        <button id='carousel__button--next' class="next"aria-label="next">Next</button>
+      </div>
 
-        <script src='script.js'></script>
       </div>
       <div class='footer'>
         <div class='footer-item footer-one'>
@@ -70,5 +74,6 @@
       </div>
     </div>
   </div>
+  <script src='script.js'></script>
   </body>
 </html>
