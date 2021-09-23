@@ -112,6 +112,7 @@
 
   button:focus {
     background: rgb(240, 213, 138);
+    border-color: rgb(201, 113, 62);
   }
   
   .previous, 
