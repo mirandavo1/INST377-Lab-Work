@@ -109,9 +109,13 @@
   .carousel__item img{
     max-width: 300px;
   }
+
+  button:focus {
+    background: rgb(240, 213, 138);
+  }
   
   .previous, 
-  .next{
+  .next {
     display: flex;
     border: none;
     margin: 3px;
