@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
               platforms.shift()
               console.log(platforms)
               score++
-              var newPlatform = new Platform(600)
+              newPlatform = new Platform(600)
               platforms.push(newPlatform)
             }
         }) 
