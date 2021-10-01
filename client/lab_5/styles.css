@@ -9,19 +9,37 @@ body {
   padding: 0;
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
     ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-  background-color: darkslategray;
+  background-color: rgb(190, 164, 138);
 }
 
 /* Page Layout */
 .columns {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
 }
 
 .wrapper {
   display: flex;
+  flex-direction: column;
 }
+
 .container {
   max-width: 960px;
   margin-top: 25px;
+}
+
+.title{
+  display: inline-block;
+  background-color: rgba(158, 129, 109, 0.8);
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.block:not(:last-child) {
+  margin-bottom: 3 rem;
 }
