@@ -31,15 +31,6 @@ body {
   margin-top: 25px;
 }
 
-.title{
-  display: inline-block;
-  background-color: rgba(158, 129, 109, 0.8);
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
 .block:not(:last-child) {
   margin-bottom: 3 rem;
 }
