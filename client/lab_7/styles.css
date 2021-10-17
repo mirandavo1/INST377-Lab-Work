@@ -1,3 +1,28 @@
-.mapid { 
-    height: 180px; 
+#mapid { 
+    height: 542px; 
+    width: 50%;
+    margin: 25px 25px;;
+}
+
+.layout {
+    display: flex;
+    padding: 0 10px;
+    font-family: Arial, sans-serif;
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+}
+
+.background {
+    background-color: rgb(180, 169, 149);
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.name {
+    font-weight: 700;
+    text-transform: uppercase;
 }
