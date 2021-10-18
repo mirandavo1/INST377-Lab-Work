@@ -1,26 +1,32 @@
 async function dataHandler() {
+  let mymap = mapInit();
+
   const endpoint =
     "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 
   const request = await fetch(endpoint);
-  const zip = await request.json();
+  const data = await request.json();
 
-  function findMatches(wordToMatch, zip) {
-    const filteredList = zip.filter((place) => {
-      const repex = new RegExp(wordToMatch, "gi");
-      zip = zip.slice(0, 5);
+  let markers = [];
+
+  function findMatches(zip, data, mymap) {
+    const filteredList = data.filter((place) => {
+      return place.zip.startsWith(zip);
     });
 
-    zip.forEach((place) => {
+    const limitedList = filteredList.slice(0, 5);
+
+    limitedList.forEach((place, index) => {
       const has_coords = place.hasOwnProperty("geocoded_column_1");
       if (has_coords) {
         const latlong = place.geocoded_column_1.coordinates;
         const marker = latlong.reverse();
-        //   L.marker.addTo(document.querySelector('#mapid'));
+        markers.push(L.marker(marker).addTo(mymap));
+        if (index === 1) mymap.setView(marker);
       }
-      // return place.name.match(repex) || place.category.match(repex) && has_coords;
     });
-    return place.zip.match(repex);
+
+    return limitedList;
   }
 
   function numberwithCommas(x) {
@@ -28,10 +34,14 @@ async function dataHandler() {
   }
 
   function displayMatches(event) {
+    markers.forEach((marker) => {
+      marker.remove();
+    });
     if (event.target.value.length != 0) {
-      const matchArray = findMatches(event.target.value, zip);
+      const matchArray = findMatches(event.target.value, data, mymap);
+      console.log(matchArray);
       const html = matchArray
-        .map((place, index) => {
+        .map((place) => {
           return `<li class= "background">
             <span class="name"> ${place.name} </span><br>
                 <i>${place.address_line_1} <br>
@@ -62,14 +72,14 @@ async function dataHandler() {
 window.onload = dataHandler;
 
 function mapInit() {
-  var mymap = L.map("mapid").setView([38.9331363, -76.7725779], 13);
+  const mymap = L.map("mapid").setView([38.9889562, -76.9441159], 13);
 
   L.tileLayer(
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
     {
       attribution:
         'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
+      maxZoom: 12,
       id: "mapbox/streets-v11",
       tileSize: 512,
       zoomOffset: -1,
@@ -77,6 +87,8 @@ function mapInit() {
         "pk.eyJ1IjoibXJuZGF2byIsImEiOiJja3V1bmdmNG82MWtrMm5rNmJmY2poemxnIn0.JpoX0fzBCvWUjx4p-1icHw",
     }
   ).addTo(mymap);
-}
 
-mapInit();
+  const marker = L.marker([38.9889562, -76.9441159]).addTo(mymap);
+
+  return mymap;
+}
