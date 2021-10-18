@@ -22,7 +22,7 @@ async function dataHandler() {
         const latlong = place.geocoded_column_1.coordinates;
         const marker = latlong.reverse();
         markers.push(L.marker(marker).addTo(mymap));
-        if (index === 1) mymap.setView(marker);
+        if (index === 0) mymap.setView(marker);
       }
     });
 
